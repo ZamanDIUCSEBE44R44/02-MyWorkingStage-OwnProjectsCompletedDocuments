@@ -1,0 +1,7 @@
+input:not([type="submit"]){
+	border:0px;
+	background-color:#666;
+	margin:5px;
+	
+	
+}

@@ -1,0 +1,10 @@
+.profile_pic{
+	float:left;
+	//float:right;
+	margin-right:50px;
+	
+}
+#clear{
+	clear:left;
+	
+}

@@ -1,0 +1,72 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	font-family:sans-sarif;
+	text-align:center;
+}
+/*centering the Website*/
+#center_maker{
+	width:960px;
+	margin:0px auto;/*center the body perfectly*/
+	//border:2px solid blue;
+	text-align:left;	
+}
+/*header starts from here*/
+#header{
+	border:1px solid blue;
+	padding:20px;
+	margin:5px 0px;
+}
+.logo{
+	display:inline;
+	vertical-align:middle;
+}
+#header h1{
+	display:inline;
+}
+/*header ends from here*/
+/*navigation starts from here*/
+#nav{
+	border:1px solid blue;
+	padding:10px;
+	margin:5px 0px;
+}
+#nav ul li{
+	list-style-type:none;
+	display:inline;
+}
+#nav ul li a{
+	margin:5px;
+}
+#nav ul li a:hover{
+	background-color:blue;
+	color:#fff;
+}
+/*navigation ends from here*/
+/*aside starts from here*/
+#aside{
+	width:296px;
+	border:2px solid blue;/*-4px*/
+	padding:10px;/*-20px*/
+	float:left;
+}
+/*aside ends from here*/
+
+/*section starts from here*/
+#section{
+	width:606px;
+	padding:10px;/*-20px*/
+	margin:0px 0px 10px 10px;/*-10px*/
+	border:2px solid blue;/*-4px*/
+	float:left;
+}
+/*section ends from here*/
+#footer{
+	border:1px solid blue;
+	padding:20px;
+	text-align:center;
+	clear:left;
+}
+

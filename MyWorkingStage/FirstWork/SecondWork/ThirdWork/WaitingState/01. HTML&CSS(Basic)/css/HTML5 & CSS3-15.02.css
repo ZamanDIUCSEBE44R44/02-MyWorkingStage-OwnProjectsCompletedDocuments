@@ -1,0 +1,13 @@
+body{
+	font-family: 'Lora', serif;
+	font-size:34px;
+	font-weight:bold;
+	font-style:italic;
+	color:#551A8B;
+	background-color: blue;
+	background-image:url('../images/BG-01.jpg');
+	background-size:cover;
+
+}
+
+   

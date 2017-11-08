@@ -1,0 +1,13 @@
+body{
+	font-family: 'Lora', serif;
+	font-size:34px;
+	font-weight:bold;
+	font-style:italic;
+
+}
+
+
+p{
+	color:#fff;
+	background-color: blue;
+}

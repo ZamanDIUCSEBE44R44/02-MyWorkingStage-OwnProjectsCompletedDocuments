@@ -1,0 +1,109 @@
+*{margin:0; padding:0; outline:0}
+body {
+	font-family: arial;
+	font-size: 16px;
+	line-height: 23px;
+	color: #000;
+}
+.templete{width:960px; margin: 0 auto }/*background:#ddd; margin-bottom:10px*/
+.clear{overflow:hidden}
+.headersection{height:85px; background:#2E2D2F; color:#fff}
+.headersection h2 {
+	font-size: 40px;
+	text-align: center;
+	padding-top: 30px;
+}
+.navsection{background:#99989A;}
+.navsection ul{margin:0px; padding:0px; list-style:none}
+.navsection ul li{display:block; float:left;}
+.navsection ul li a {
+	display: block;
+	background: #fff;
+	padding: 5px 30px;
+	background: #C1C0C1;
+	margin: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #444;
+}
+.navsection ul li a:hover{background:#2E2D2F; color:#fff}
+
+
+
+.contentsection{background:#FFFFFF}
+.maincontent {
+	width: 650px;
+	background: #E0DFE1;
+	float: left;
+	padding: 10px;
+	margin: 15px;
+	margin-left: 0px;
+}
+.samepost{}
+.samepost h2 {
+	padding: 10px;
+	border-bottom: 2px solid #555555;
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+.samepost img {
+	float: left;
+	width: 200px;
+	margin-right: 10px;
+	background: #fff;
+	padding: 5px;
+	border: 1px solid #99989A;
+}
+.samepost p {
+	font-size: 16px;
+	line-height: 23px;
+	text-align: justify;
+}
+.readmore{float:right}
+.readmore a {
+	text-decoration: none;
+	background: #fff;
+	display: block;
+	padding: 4px 8px;
+	font-size: 20px;
+	color: #333;
+	border: 1px solid #99989A;
+	border-radius: 5px;
+}
+.readmore a:hover{color:#184DC5}
+
+/*
+.maincontent p {
+	font-size: 16px;
+	line-height: 22px;
+	margin-bottom: 15px;
+}*/
+.sidebar {
+	width: 255px;
+	background: #BBBABB;
+	float: right;
+	margin-top: 15px;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+.samesidebar{}
+.samesidebar h2 {
+	background: #99989A;
+	padding: 10px;
+	color: #fff;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #555555;
+}
+.samesidebar p{}
+.footersection{height:90px; background:#504F50}
+.footersection p {
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 30px;
+	font-weight: bold;
+}
+
+.
+.
+.

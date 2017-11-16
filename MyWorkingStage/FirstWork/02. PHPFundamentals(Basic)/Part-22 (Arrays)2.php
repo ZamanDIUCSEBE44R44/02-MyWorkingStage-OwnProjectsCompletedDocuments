@@ -25,30 +25,18 @@ $fontcolor = "#fff";
 		Arrays		
 		<hr />
 		<?php
-			$x= array(1,2,3,4,5);
-			$length= count($x);
-			for($i=0;$i<$length;$i++)
-			{
-				echo $x[$i];
-				echo "<br />";
-			}
-			/*
-			$x[0]=1;
-			$x[1]=2;
-			$x[2]=3;
-			$x[3]=4;
-			$x[4]=5;
-			$x[5]=6;
-			
-			echo $x[0]."<br />";
-			echo count($x)."<br />";
-			
-			*/
-			
+			$cars= array(
+				array("BMW", 15, 50),
+				array("volvo", 20, 5),
+				array("Saab", 25, 30)
+			);
+			echo $cars[0][2]."<br />";
+			echo $cars[1][1]."<br />";
+			echo $cars[2][2]."<br />";
 			
 			
 		?>
-		<br /><a href="Part-22 (Arrays)1.php">Part-22 (Arrays)1</a>
+		<br /><a href="Part-22 (Arrays)3.php">Part-22 (Arrays)3</a>
 		</section>
 		<section class="footeroption">
 			<h2><?php echo "www.trainingwithliveproject.com";?></h2>

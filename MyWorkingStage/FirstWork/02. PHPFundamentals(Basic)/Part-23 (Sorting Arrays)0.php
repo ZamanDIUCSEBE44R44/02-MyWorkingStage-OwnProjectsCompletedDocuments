@@ -25,30 +25,16 @@ $fontcolor = "#fff";
 		Arrays		
 		<hr />
 		<?php
-			$x= array(1,2,3,4,5);
-			$length= count($x);
+			$names = array("Rakib", "Mamun", "Akbor", "Badol");
+			sort($names);
+			$length= count($names);
 			for($i=0;$i<$length;$i++)
 			{
-				echo $x[$i];
+				echo $names[$i];
 				echo "<br />";
 			}
-			/*
-			$x[0]=1;
-			$x[1]=2;
-			$x[2]=3;
-			$x[3]=4;
-			$x[4]=5;
-			$x[5]=6;
-			
-			echo $x[0]."<br />";
-			echo count($x)."<br />";
-			
-			*/
-			
-			
-			
 		?>
-		<br /><a href="Part-22 (Arrays)1.php">Part-22 (Arrays)1</a>
+		<br /><a href="Part-23 (Sorting Arrays)1.php">Part-23 (Sorting Arrays)1</a>
 		</section>
 		<section class="footeroption">
 			<h2><?php echo "www.trainingwithliveproject.com";?></h2>

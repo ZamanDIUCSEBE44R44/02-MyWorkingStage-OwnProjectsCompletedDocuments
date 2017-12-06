@@ -9,7 +9,7 @@ $fontcolor = "#fff";
 	<meta charset="UTF-8">
 	<title>PHP Syntax</title>
 	<style type="text/css">
-	body{font-family:<?php echo $font;?>}
+	 body{font-family:<?php echo $font;?>; background:url(images/bg1.png) repeat fixed 0 0 #fff;}
 	.phpcoding{width:900px; margin:0 auto; background:<?php echo "#ddd";?>; }
 	.headeroption, .footeroption{background:<?php echo $bgcolor;?>; color:<?php echo $fontcolor;?>;text-align:center; padding:20px;}
 	.headeroption h2, .footeroption h2{margin:0px}
@@ -57,6 +57,7 @@ $fontcolor = "#fff";
 			</form>
 			<?php 
 			$name = $email = $website = $comment = $gender = "";
+			$errname = $erremail = $errweb = $errcomment = $errgender = "";
 				if($_SERVER["REQUEST_METHOD"] == "POST")
 				{
 					$name = validate($_POST['name']);

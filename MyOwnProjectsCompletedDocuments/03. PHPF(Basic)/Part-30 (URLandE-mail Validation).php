@@ -15,22 +15,31 @@
 					{
 						$name = validate($_POST['name']);
 					}
-					if(empty($_POST['email']))
-					{
-						$erremail = "<span style='color:green'>E-mail is Required</span>";
-					}
-					else
-					{
-						$email = validate($_POST['email']);
-					}
-					if(empty($_POST['website']))
-					{
-						$errweb = "<span style='color:green'>Website is Required</span>";
-					}
-					else
-					{
-					$website = validate($_POST['website']);
-					}
+						if(empty($_POST['email']))
+						{
+							$erremail = "<span style='color:green'>E-mail is Required</span>";
+						}
+						elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+						{
+							$erremail = "<span style='color:green'>Invalid E-mail Format</span>";
+						}
+						else
+						{
+							$email = validate($_POST['email']);
+						}
+						
+						if(empty($_POST['website']))
+						{
+							$errweb = "<span style='color:green'>Website is Required</span>";
+						}
+						elseif(!filter_var($_POST['website'], FILTER_VALIDATE_URL))
+							{
+								$errweb = "<span style='color:green'>Invalid Website Format</span>";
+							}
+						else
+						{
+						$website = validate($_POST['website']);
+						}
 					if(empty($_POST['gender']))
 					{
 						$errgender = "<span style='color:green'>Gender is Required</span>";
@@ -42,11 +51,6 @@
 					$comment = validate($_POST['comment']);
 
 					
-					echo "Name : ".$name."<br />";
-					echo "E-mail : ".$email."<br />";
-					echo "Website : ".$website."<br />";
-					echo "Comment : ".$comment."<br />";
-					echo "Gender : ".$gender."<br />";
 				}
 				function validate($data)
 				{
@@ -110,9 +114,16 @@
 					</tr>
 				</table>
 			</form>
+			<?php
+					echo "Name : ".$name."<br />";
+					echo "E-mail : ".$email."<br />";
+					echo "Website : ".$website."<br />";
+					echo "Comment : ".$comment."<br />";
+					echo "Gender : ".$gender."<br />";
+			?>
 			
 		
-		<br /><a href="Part-30 (URLandE-mail Validation).php">Part-30 (URLandE-mail Validation)</a>
+		<br /><a href="Part-31 (Date and Time).php">Part-31 (Date and Time)</a>
 		</section>
 		<section class="footeroption">
 			<h2><?php echo "www.trainingwithliveproject.com";?></h2>

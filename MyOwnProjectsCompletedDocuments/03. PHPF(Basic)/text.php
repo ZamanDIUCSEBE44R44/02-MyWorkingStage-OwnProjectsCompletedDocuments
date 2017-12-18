@@ -1,8 +1,15 @@
-<?php
-$message = $_GET['msg'];
-$word = $_GET['txt'];
-
-echo "First Text = ".$message;
-echo "<br />";
-echo "Second Text = ".$word;
-?>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<form action="upload.php" method="POST" enctype="multipart/form-data">
+		<input type="file" name="file" />
+		<button type="submit" name="submit">Upload</button>
+	
+	
+	</form>
+</body>
+</html>

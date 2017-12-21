@@ -12,17 +12,16 @@
 		</span>
 		<hr />
 		<?php
-			$name = array("Akbor","Mamun","Delwoar");
-			//$department = array("Computer Science","Maths","Physics");
-			$age = array("28","29","30");
-			$combile = array_combine($name, $age);
+			$name = array("Akbor","Mamun","Delwoar","Akbor","Mamun","Delwoar","Akbor","Mamun","Delwoar");
+			$age = array("28","29","30","28","29","30","28","29","30","28","29","30");
 			
 			print("<pre>");
-			print_r($combile);
+			//print_r(array_count_values($name));
+			print_r(array_count_values($age));
 			print("</pre>");
 		?>
 				
 				
-		<br /><a href="Part-05 (array_count_values).php">Part-05 (array_count_values)</a>
+		<br /><a href="Part-06 (array_diff).php">Part-06 (array_diff)</a>
 		</section>
 <?php include_once 'footer.php';?>

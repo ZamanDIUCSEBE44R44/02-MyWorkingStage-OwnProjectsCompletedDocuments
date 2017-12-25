@@ -7,12 +7,12 @@
 			echo "Bangladesh Time is ".date("h:i:sa")."<br />";
 		?>
 		</span>
-	<hr />
+	<hr />	
 	<script>
 		function clickHere()
 		{
-			var getName = document.myform.name.value;
-			document.getElementById('showName').innerHTML = getName;
+			var getname = document.myform.name.value;
+			document.getElementById('showName').innerHTML = getname;
 			
 			var genderLength = document.myform.gender.length;
 			for(i=0; i<genderLength; i++)
@@ -36,11 +36,11 @@
 			}
 			document.getElementById('showDep').innerHTML = depValue;
 			
-			var index = document.myform.coder.checkedIndex;
+			var index = document.myform.coder.selectedIndex;
 			coderValue = document.myform.coder.options[index].value;
 			document.getElementById('showCoder').innerHTML = coderValue;
 		}
-	</script>
+	</script>	
 	<table class="tblone">
 		<tr>
 			<td colspan="2" align="center">Output</td>
@@ -66,7 +66,7 @@
 			<table>
 				<tr>
 					<td>Name</td>
-					<td><input type="text" name="name" required="" /></td>
+					<td><input type="text" name="name" required="1" /></td>
 				</tr>
 				<tr>
 					<td>Gender</td>
@@ -86,7 +86,7 @@
 				<tr>
 					<td>Coder</td>
 					<td>
-						<select name="coder" id="">
+						<select name="coder" required="1">
 							<option value="">Select One</option>
 							<option value="JAVA">JAVA</option>
 							<option value="PHP">PHP</option>
@@ -103,7 +103,7 @@
 					</td>
 				</tr>
 			</table>
-		</form>		
-		<br /><a href="Part-09.php">Get data from a data table in JavaScript (Part-09)</a>
+		</form>
+		<br /><a href="Part-10.php">92/92 Get data from a data table in PHP (Part-10)</a>
 	
 <?php include_once 'footer.php';?>

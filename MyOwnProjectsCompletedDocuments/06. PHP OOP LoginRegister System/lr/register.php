@@ -14,12 +14,14 @@
 			</div>
 			<div class="panel-body">
 				<div style="max-width: 600px; margin: 0px auto">
+<!---->
 <?php
 	if (isset($userRegi))
 	{
 		echo $userRegi;
 	}
 ?>
+
 					<form action="" method="post">
 						<div class="form-group">
 							<label for="name">Your Name</label>

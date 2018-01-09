@@ -31,17 +31,18 @@
 						$userLogin = Session::get("login");
 						if ($userLogin == true)
 						{
-							echo "
-							<li><a href='profile.php'>Profile</a></li>
-							<li><a href='?action=logout'>Logout</a></li>
-							";
+					?>							
+							<li><a href="index.php">Home</a></li>
+							<li><a href="profile.php?id=<?php echo $id;?>">Profile</a></li>
+							<li><a href="?action=logout">Logout</a></li>
+					<?php
 						}
 						else
 						{
-							echo "
-							<li><a href='login.php'>Login</a></li>
-							<li><a href='register.php'>Register</a></li>
-							";
+					?>
+							<li><a href="login.php">Login</a></li>
+							<li><a href="register.php">Register</a></li>
+					<?php
 						}
 					?>
 				</ul>

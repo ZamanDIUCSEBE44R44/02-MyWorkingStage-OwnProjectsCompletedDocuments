@@ -40,12 +40,13 @@
 						<div class="form-group">
 							<label for="email">Email Address</label>
 							<input type="text" id="email" name="email" class="form-control" value="<?php echo $userdata->email;?>">
-						</div>
-						<button type="submit" name="update" class="btn btn-success">Update</button>
+						</div>						
 						<?php
 							$sesId = Session::get("id");
 							if ($userid == $sesId) { 
 						?>
+						<button type="submit" name="update" class="btn btn-success">Update</button>
+						<a class="btn btn-info" href="changepass.php?id=<?php echo $userid?>">Password Change</a>
 						<?php } ?>
 					</form>
 					<?php } ?>

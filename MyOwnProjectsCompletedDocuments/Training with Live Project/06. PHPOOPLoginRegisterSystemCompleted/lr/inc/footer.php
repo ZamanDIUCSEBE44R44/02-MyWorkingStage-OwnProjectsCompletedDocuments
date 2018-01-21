@@ -1,5 +1,5 @@
 <div class="well">
-			<h3>Website: /www.trainingwithliveproject.com/
+			<h3>Website: /www.zamanitdevelopmentltd.com/
 				<span class="pull-right">Like Us: www.facebook.com/proDelowar</span>
 			</h3>
 		</div>

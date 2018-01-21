@@ -15,7 +15,8 @@
 			$name = $data['name'];
 			$username = $data['username'];
 			$email = $data['email'];
-			$password = md5($data['password']);
+			$password = ($data['password']);
+			
 			$chk_email = $this->emailCheck($email);
 			if ($name == "" OR $username == "" OR $email == "" OR $password == "")
 			{
@@ -44,6 +45,9 @@
 				$msg = "<div class='alert alert-danger'><strong>Error! </strong>Email Address is already Exist!</div>";
 				return $msg;
 			}
+			
+			$password = md5($data['password']);
+
 			$sql = "INSERT INTO tbl_user(name, username, email, password) VALUES(:name, :username, :email, :password)";
 			$query = $this->db->pdo->prepare($sql);
 			$query->bindValue(':name', $name);
@@ -176,5 +180,70 @@
 			}
 
 		}
+		private function checkPassword($id,$old_pass)
+		{
+			$password = md5($old_pass);
+			$sql = "SELECT password FROM tbl_user WHERE id = :id AND password = :password";
+				$query = $this->db->pdo->prepare($sql);
+				$query->bindValue(':id', $id);
+				$query->bindValue(':password', $password);
+				$query->execute();
+				if ($query->rowCount() > 0) {
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+		}
+		public function updatePassword($id,$data)
+		{
+				$old_pass = $data['old_pass'];
+				$new_pass = $data['password'];
+				$chk_pass = $this->checkPassword($id,$old_pass);
+
+				if ($old_pass == "" OR $new_pass == "") 
+				{
+					$msg = "<div class='alert alert-danger'><strong>Error! </strong>Field must not be Empty.</div>";
+					return $msg;
+				}
+
+				if ($chk_pass == false) 
+				{
+					$msg = "<div class='alert alert-danger'><strong>Error! </strong>Old Password not Exist.</div>";
+					return $msg;
+				}
+
+				if (strlen($new_pass) < 6) 
+				{
+					$msg = "<div class='alert alert-danger'><strong>Error! </strong>Password is too short.</div>";
+					return $msg;
+				}
+
+				$password = md5($new_pass);
+
+				$sql = "UPDATE tbl_user SET 
+					password     = :password
+					WHERE id = :id";
+				$query = $this->db->pdo->prepare($sql);
+				
+				$query->bindValue(':password', $password);
+				$query->bindValue(':id', $id);
+				$result = $query->execute();
+				if($result)
+				{
+					$msg = "<div class='alert alert-success'><strong>Success </strong>Password updated successfully.</div>";
+					return $msg;
+				}
+				else
+				{
+					$msg = "<div class='alert alert-danger'><strong>Error! </strong>Password not updated.</div>";
+					return $msg;
+				}
+
+
+		}
+			
 	}
+	
 ?>

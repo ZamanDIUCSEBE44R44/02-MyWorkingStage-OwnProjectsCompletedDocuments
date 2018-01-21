@@ -9,6 +9,7 @@
 	{
 		echo $loginmsg;
 	}
+	Session::set("loginmsg", NULL);
 ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">

@@ -6,10 +6,24 @@
 	$pd = new Product();
 	$fm = new Format();
 ?>
+<?php
+	if (isset($_GET['delpro'])) 
+	{
+		//$id = $_GET['delcat'];
+		$id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delpro']);
+		$delpro = $pd->delProtById($id);
+	}
+?>
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Post List</h2>
-        <div class="block">  
+        <div class="block">
+        	<?php
+                	if (isset($delpro)) 
+                	{
+                		echo $delpro;
+                	}	
+                ?>
             <table class="data display datatable" id="example">
 			<thead>
 				<tr>

@@ -17,12 +17,10 @@
                 <h2>Brand List</h2>
                 <div class="block">
                 <?php
-                /**/
                 	if (isset($delbrand)) 
                 	{
                 		echo $delbrand;
-                	}
-                	
+                	}	
                 ?>     
                     <table class="data display datatable" id="example">
 					<thead>
